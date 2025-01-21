@@ -1,0 +1,13 @@
+main {
+  width: 500px;
+  margin: 0rem auto;
+  grid-auto-flow: row;
+  gap: 2rem;
+  display: flex;
+}
+
+@media (max-width: 620px) {
+  main {
+    width: 300px;
+  }
+}

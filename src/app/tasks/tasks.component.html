@@ -1,0 +1,29 @@
+<header>
+  <h1>To Do List</h1>
+  <a routerLink="tasks/new">Add Task</a>
+</header>
+
+<div class="filter-buttons">
+  <button (click)="setFilter('all')" [class.active]="filter === 'all'">
+    All
+  </button>
+  <button
+    [class.active]="filter === 'completed'"
+    (click)="setFilter('completed')"
+  >
+    Completed
+  </button>
+  <button [class.active]="filter === 'pending'" (click)="setFilter('pending')">
+    Pending
+  </button>
+</div>
+
+<ul>
+  @for (task of filteredTasks(); track task.id) {
+  <li>
+    <app-task [task]="task" />
+  </li>
+  } @empty {
+  <p>There are no tasks yet. Start adding some!</p>
+  }
+</ul>

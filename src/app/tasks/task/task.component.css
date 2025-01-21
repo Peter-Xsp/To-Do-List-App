@@ -1,0 +1,71 @@
+article {
+  padding: 2rem;
+  color: #25113d;
+  background-color: #efeaeacd;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
+  margin: 8px;
+}
+
+article.completed {
+  background-color: #b7e7c2;
+  color: #1b6f2e;
+}
+
+.card {
+  padding: 10px;
+}
+
+h2 {
+  margin: 0;
+}
+
+time {
+  color: #3c2c50;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  width: 100%;
+}
+
+.taskButtons {
+  gap: 0.5rem;
+  display: flex;
+}
+
+.taskButtons button {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  padding: 10px;
+  color: red;
+  transition: background-color 0.3s ease;
+}
+
+.taskButtons .material-symbols-outlined:hover {
+  color: red;
+  text-shadow: 0px 2px 4px rgba(231, 87, 87, 0.3);
+  transform: scale(1.1);
+}
+
+.complete button {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #31b941ea;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: cursive;
+}
+
+.complete button:hover,
+.complete button:active {
+  background-color: #ffffff;
+  color: #31b941ea;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+}

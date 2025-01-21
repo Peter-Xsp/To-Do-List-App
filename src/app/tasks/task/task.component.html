@@ -1,0 +1,22 @@
+<article [class.completed]="task().completed">
+  <div class="card">
+    <h2>{{ task().title }}</h2>
+    <time>{{ task().dueDate | date : "fullDate" }}</time>
+    <p>{{ task().summary }}</p>
+    <div class="actions">
+      <div class="complete">
+        <button (click)="onComplete()">
+          {{ task().completed ? "Task is Completed! ✅" : "Complete" }}
+        </button>
+      </div>
+      <div class="taskButtons">
+        <button (click)="onDelete()">
+          <span class="material-symbols-outlined"> delete </span>
+        </button>
+        <button [routerLink]="['/tasks/edit', task().id]">
+          <span class="material-symbols-outlined"> edit </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</article>

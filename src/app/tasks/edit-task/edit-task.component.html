@@ -1,0 +1,40 @@
+<form (ngSubmit)="onEdit()">
+  <h2>Edit Task</h2>
+  <p>
+    <label for="title">Title</label>
+    <input
+      type="text"
+      id="title"
+      name="title"
+      [(ngModel)]="editTitle"
+      required
+    />
+  </p>
+
+  <p>
+    <label for="summary">Summary</label>
+    <textarea
+      id="summary"
+      rows="5"
+      name="summary"
+      [(ngModel)]="editSummary"
+      required
+    ></textarea>
+  </p>
+
+  <p>
+    <label for="due-date">Due Date</label>
+    <input
+      type="date"
+      id="due-date"
+      name="due-date"
+      [(ngModel)]="editDate"
+      required
+    />
+  </p>
+
+  <p class="actions">
+    <a routerLink="">Cancel</a>
+    <button type="submit">Save Changes</button>
+  </p>
+</form>
